@@ -42,7 +42,7 @@ jobs:
           git config pull.rebase false
 
           branch=automated-documentation-update-"$GITHUB_RUN_ID"
-          git checkout -b $branch
+          git checkout -b "$branch"
           message='Automated documentation update'
 
           # Add / update and commit
