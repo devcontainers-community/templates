@@ -2,9 +2,9 @@
 // README at: https://github.com/devcontainers-community/templates/tree/main/src/jupyter-datascience-notebooks
 {
   "name": "Jupyter Data Science Notebooks",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "docker.io/jupyter/${templateOption:baseVariant}:${templateOption:imageVariant}",
-
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
