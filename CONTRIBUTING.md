@@ -12,10 +12,6 @@ If you like the project, but just don't have time to contribute, that's OK too!
 You can also star the project ⭐, rave about it online 💬, or add a link to us
 🔗 in your project's readme.
 
-⚠️ You must never report security 🔒 related issues, vulnerabilities or bugs
-including sensitive information to the issue tracker, or elsewhere in public.
-Instead sensitive bugs must be sent by email to jcbhmr@outlook.com.
-
 ## Contributing code
 
 1. 🔀 Fork the repo
