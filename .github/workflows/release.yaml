@@ -2,6 +2,15 @@ name: "Release Dev Container Templates & Generate Documentation"
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -32,12 +41,12 @@ jobs:
           git config --global user.name github-actions
           git config pull.rebase false
 
-          branch=automated-documentation-update-$GITHUB_RUN_ID
-          git checkout -b $branch
+          branch=automated-documentation-update-"$GITHUB_RUN_ID"
+          git checkout -b "$branch"
           message='Automated documentation update'
 
           # Add / update and commit
-          git add */**/README.md
+          git add ./**/README.md
           git commit -m 'Automated documentation update [skip ci]' || export NO_UPDATES=true
 
           # Push
