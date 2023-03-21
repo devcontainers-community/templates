@@ -28,12 +28,6 @@ creation of a `.devcontainer/devcontainer.json` file!
 Make sure you click the <kbd>Show All Definitions...</kbd> option to see our
 unofficial templates!
 
-<div align="center">
-
-![](https://i.imgur.com/IO5r8Gf.png)
-
-</div>
-
 ## Development
 
 🐣 The [@devcontainers-community] organization is still in its early stages.
