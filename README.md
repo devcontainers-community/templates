@@ -33,9 +33,9 @@ unofficial templates!
 🐣 The [@devcontainers-community] organization is still in its early stages.
 This template repository is currently limited in scope. We are **only adding
 popular templates from [microsoft/vscode-dev-containers]** for now. You can find
-more information about [@devcontainers-community]'s goals and plans in
-[devcontainers-community#1]. If you notice a bug 🐛 or have an improvement
-suggestion 💡 we'd love to hear it! 😍
+more information about our goals and plans in [devcontainers-community#1]. If
+you notice a bug 🐛 or have an improvement suggestion 💡 we'd love to hear it!
+😍
 
 If you're interested in getting started modifying, adding, or testing a template
 in this repository, you can do so without even leaving your browser thanks to
