@@ -12,8 +12,7 @@
 
 🔧 80% of the configuration you'll ever need \
 💻 Ready to go with GitHub Codespaces \
-🚀 Quickly get up-and-running with a devcontainer \
-🐳 No need to mess with a `Dockerfile`
+🚀 Quickly get up-and-running with a devcontainer
 
 ## Usage
 
