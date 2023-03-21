@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![](https://i.imgur.com/NSfVKbP.png)
+![](https://i.imgur.com/Us84cLP.png)
 
 </div>
 
