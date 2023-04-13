@@ -29,6 +29,9 @@ unofficial templates!
 
 ## Development
 
+![Devcontainers](https://img.shields.io/static/v1?style=for-the-badge&message=Devcontainers&color=2496ED&logo=Docker&logoColor=FFFFFF&label=)
+![Bash](https://img.shields.io/static/v1?style=for-the-badge&message=Bash&color=4EAA25&logo=GNU+Bash&logoColor=FFFFFF&label=)
+
 🐣 The [@devcontainers-community] organization is still in its early stages.
 This template repository is currently limited in scope. We are **only adding
 popular templates from [microsoft/vscode-dev-containers]** for now. You can find
@@ -51,4 +54,5 @@ script.
 [@devcontainers-community]: https://github.com/devcontainers-community
 [microsoft/vscode-dev-containers]: https://github.com/microsoft/vscode-dev-containers#readme
 [devcontainers-community#1]: https://github.com/orgs/devcontainers-community/discussions/1
+[discussion]: https://github.com/devcontainers-community/templates/discussions
 <!-- prettier-ignore-end -->
