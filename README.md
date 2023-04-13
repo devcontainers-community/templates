@@ -54,10 +54,13 @@ After launching your dev environment and making some changes, you're probably
 going to want to test those changes. To do so, you can run the `tools/test.sh`
 script.
 
+🤝 Check out our [contributing guide] to see how to get your changes merged!
+
 <!-- prettier-ignore-start -->
 [@devcontainers]: https://github.com/devcontainers
 [@devcontainers-community]: https://github.com/devcontainers-community
 [microsoft/vscode-dev-containers]: https://github.com/microsoft/vscode-dev-containers#readme
 [devcontainers-community#1]: https://github.com/orgs/devcontainers-community/discussions/1
 [discussion]: https://github.com/devcontainers-community/templates/discussions
+[contributing guide]: https://github.com/devcontainers-community/blob/main/CONTRIBUTING.md
 <!-- prettier-ignore-end -->
