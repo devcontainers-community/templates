@@ -14,6 +14,11 @@
 💻 Ready to go with GitHub Codespaces \
 🚀 Quickly get up-and-running with a devcontainer
 
+**🤝 We want you!** If you're a community devcontainer template maintainer, we'd
+love to add you to this project! ❤️ If you just want to hand off a devcontainer
+template that you no longer want to maintain, **that's perfect too**. Open a
+[Discussion] and let's have a friendly chat. 😊
+
 ## Usage
 
 ![Codespaces](https://img.shields.io/static/v1?style=for-the-badge&message=Codespaces&color=181717&logo=GitHub&logoColor=FFFFFF&label=)
