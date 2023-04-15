@@ -35,6 +35,4 @@ jobs:
 
       - name: Smoke test for '${{ matrix.templates }}'
         id: smoke_test
-        uses: ./.github/actions/smoke-test
-        with:
-          template: "${{ matrix.templates }}"
+        run: ./test.sh "${{ matrix.templates }}"
