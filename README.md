@@ -51,7 +51,7 @@ green <kbd>Code</kbd> button at the top of the GitHub web UI and then
 <kbd>Create codespace on main</kbd>. 🚀
 
 After launching your dev environment and making some changes, you're probably
-going to want to test those changes. To do so, you can run the `tools/test.sh`
+going to want to test those changes. To do so, you can run the `./test.sh`
 script.
 
 🤝 Check out our [contributing guide] to see how to get your changes merged!
