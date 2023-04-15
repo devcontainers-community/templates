@@ -11,4 +11,5 @@ in [the Jupyter Docker Stacks reference page](https://jupyter-docker-stacks.read
 ## Credits
 
 This template was originally created by [@nathancarter](https://github.com/nathancarter)
-and other contributors in the [microsoft/vscode-dev-containers](https://github.com/microsoft/vscode-dev-containers)repository. It has since been landed here. 🌠
+and other contributors in the [microsoft/vscode-dev-containers](https://github.com/microsoft/vscode-dev-containers) repository.
+It has since been landed here. 🌠
