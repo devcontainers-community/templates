@@ -18,11 +18,11 @@ jobs:
       - uses: dorny/paths-filter@v2
         id: filter
         with:
-          # Add templates here one-by-one in the form:
-          #   filters: |
-          #     color: ./**/color/**
-          #     hello: ./**/hello/**
-          filters: ""
+          filters: |
+            color: ./**/color/**
+            hello: ./**/hello/**
+            jupyter-datascience-notebooks: ./**/jupyter-datascience-notebooks/**
+
   test:
     needs: [detect-changes]
     runs-on: ubuntu-latest
