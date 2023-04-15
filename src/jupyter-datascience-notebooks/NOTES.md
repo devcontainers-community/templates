@@ -1,5 +1,8 @@
 <!-- markdownlint-disable MD041 -->
-## Choosing a base image
+
+## Configurations
+
+### Choosing a base image
 
 You can choose from many base images to tailor the container to your project's needs.
 If you don't know what this means, that's OK! Just choose the `datascience-notebook` option.
@@ -7,6 +10,11 @@ It has many packages for data science from the Julia, Python, and R communities.
 
 📚 You can learn more about what each of these base images is and what features each of them
 in [the Jupyter Docker Stacks reference page](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html).
+
+### Default command
+
+The default command of the base image is set to start the Jupyter server.
+If you do not use the Jupyter server, comment out `"overrideCommand": false` of the devcontainer.json.
 
 ## Credits
 
