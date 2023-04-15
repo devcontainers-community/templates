@@ -21,6 +21,7 @@ jobs:
           filters: |
             color: ./**/color/**
             hello: ./**/hello/**
+            jupyter-datascience-notebooks: ./**/jupyter-datascience-notebooks/**
 
   test:
     needs: [detect-changes]
