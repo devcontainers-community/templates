@@ -22,7 +22,7 @@ jobs:
           #   filters: |
           #     color: ./**/color/**
           #     hello: ./**/hello/**
-          filters: ""
+          filters: " "
   test:
     needs: [detect-changes]
     runs-on: ubuntu-latest
