@@ -19,8 +19,6 @@ jobs:
         id: filter
         with:
           filters: |
-            color: ./**/color/**
-            hello: ./**/hello/**
             jupyter-datascience-notebooks: ./**/jupyter-datascience-notebooks/**
 
   test:
