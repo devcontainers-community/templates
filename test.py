@@ -30,9 +30,6 @@ def sh(comd: str): str
     Runs a shell command and returns the STDOUT output. STDERR is output to this
     process's STDERR. STDOUT is captured and returned as a string. If this
     command causes an error, that error is raised.
-
-    Similar to google/zx package's await $`echo hi` syntax, just using
-    docstrings instead of template literals from JavaScript.
     """
 
     return run(
@@ -43,6 +40,50 @@ def sh(comd: str): str
         encoding="utf-8",
     ).stdout.strip()
 
+def instantiate_template(config_path: str, target_path: str): None
+    """
+    Instantiates a template by replacing all template options with their
+    default values. This will modify the template files in-place.
+    """
+
+    # 1. Read the template's devcontainer-template.json file. We only care about
+    #    the "options" object. Don't worry if "options" is missing or empty, we
+    #    will deal with that shortly.
+    with open(config_path) as f:
+        options = loads(f.read())["options"]
+
+    # 2. If there are no options, we are done!
+    if not options:
+        return
+
+    # 3. For each option, make it into a find-replace pair. The find is the
+    #    string "${templateOption:optionName}". The replace is the option's
+    #    default value. If there is no default value, raise an error.
+    find_replace = {}
+    for option in options:
+        option_find = "${templateOption:" + option + "}"
+        option_replace = options[option]["default"]
+        if not option_replace:
+            raise Exception(
+                f"Template '{id}' is missing a default value for " +
+                f"option '{option}'. Try to add a default value to " +
+                "the template's devcontainer-template.json file."
+            )
+        find_replace[option_find] = option_replace
+
+    # 4. For each file in the target directory, replace all find strings with
+    #    their replace strings. We do this in-place, so we don't need to return
+    #    anything.
+    for root, dirs, files in os.walk(target_path):
+        for file in files:
+            with open(os.path.join(root, file), "r+") as f:
+                contents = f.read()
+                for find, replace in find_replace.items():
+                    contents = contents.replace(find, replace)
+                f.seek(0)
+                f.write(contents)
+                f.truncate()
+
 def test_template(id: str):
     """
     Tests a specific template. Given an ID, this will copy the template to a
@@ -50,39 +91,30 @@ def test_template(id: str):
     involve running a Docker container.
     """
 
-    def instantiate_template(path: str): None
-        """
-        Instantiates a template by replacing all template options with their
-        default values. This will modify the template files in-place.
-        """
-
-        with open(f"{tmp}/devcontainer-template.json") as f:
-            options = loads(f.read())["options"]
-            if not options:
-                return
-            for option in options:
-                option_find = "${templateOption:" + option + "}"
-                option_replace = options[option]["default"]
-                if not option_replace:
-                    raise Exception(
-                        f"Template '{id}' is missing a default value for " +
-                        f"option '{option}'. Try to add a default value to " +
-                        f"the template's devcontainer-template.json file."
-                    )
-
-                for root, dirs, files in os.walk(path):
-                    for file in files:
-                        with open(os.path.join(root, file), "r+") as f:
-                            contents = f.read()
-                            f.seek(0)
-                            f.write(contents.replace(option_find, option_replace))
-                            f.truncate()
-
-
-
+    # 1. Create a temporary directory to copy the template to. We will delete
+    #    this directory when we are done.
     with TemporaryDirectory() as tmp:
+        # 2. Copy the template to the temporary directory.
         copytree(f"src/{id}", tmp)
-        print(f"🟩 Copied template '{id}' to '{tmp}'")
+        print(f"🟩 Copied template src/{id}/ to {tmp}/")
+
+        # 3. If there is a test/test-project folder, we want to use that as a
+        #    project to instantiate the devcontainer-template.json file into.
+        if os.path.isdir(f"test/{id}/test-project"):
+            copytree(f"test/{id}/test-project", f"{tmp}/test-project")
+            print(f"🟩 Copied test/{id}/test-project/ to {tmp}/test-project/")
+        else:
+            os.mkdir(f"{tmp}/test-project")
+            print(f"🟨 Created empty {tmp}/test-project/")
+
+        # 4. If there is a test/_common folder, we want to copy that into the
+        #    test-project folder so that it is available to all tests.
+        if os.path.isdir(f"test/{id}/_common"):
+            copytree(f"test/{id}/_common", f"{tmp}/test-project")
+            print(f"🟩 Copied test/{id}/_common/ to {tmp}/test-project")
+
+        # 5. Instantiate the template's devcontainer-template.json file.
+        instantiate_template(f"{tmp}/devcontainer-template.json", f"{tmp}/test-project")
 
 
 
