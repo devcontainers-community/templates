@@ -28,6 +28,12 @@ This repository is sort-of like a monorepo. We use a monorepo commit convention
 where the PR title becomes the commit message of a single squashed commit when
 merged with the `main` branch.
 
+<div align="center">
+
+![](https://user-images.githubusercontent.com/61068799/235573284-82e555ce-ebb8-4344-80d7-2d6054386bf2.png)
+
+</div>
+
 This means that your PR should at least _try_ to conform to the conventional
 commits format. Usually that means something like
 "feat(jupyter-datascience-notebooks): make it work on M1 Macs". But don't worry,
