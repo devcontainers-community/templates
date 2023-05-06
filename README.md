@@ -1,5 +1,3 @@
-![🚧 Under construction 👷‍♂️](https://i.imgur.com/LEP2R3N.png)
-
 # Community devcontainer templates
 
 📋 Community-driven collection of templates for [@devcontainers]
