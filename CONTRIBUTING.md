@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 MD036 MD033 -->
+
 **Thanks for taking the time to contribute! ❤️**
 
 All types of contributions are encouraged and valued, no matter if it's a bug
@@ -30,7 +32,7 @@ merged with the `main` branch.
 
 <div align="center">
 
-![](https://user-images.githubusercontent.com/61068799/235573284-82e555ce-ebb8-4344-80d7-2d6054386bf2.png)
+![Screenshot of PR settings](https://user-images.githubusercontent.com/61068799/235573284-82e555ce-ebb8-4344-80d7-2d6054386bf2.png)
 
 </div>
 
