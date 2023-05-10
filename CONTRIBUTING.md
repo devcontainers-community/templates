@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 MD036 MD033 -->
+
 **Thanks for taking the time to contribute! ❤️**
 
 All types of contributions are encouraged and valued, no matter if it's a bug
@@ -27,6 +29,12 @@ the content you contribute may be provided under the project license.
 This repository is sort-of like a monorepo. We use a monorepo commit convention
 where the PR title becomes the commit message of a single squashed commit when
 merged with the `main` branch.
+
+<div align="center">
+
+![Screenshot of PR settings](https://user-images.githubusercontent.com/61068799/235573284-82e555ce-ebb8-4344-80d7-2d6054386bf2.png)
+
+</div>
 
 This means that your PR should at least _try_ to conform to the conventional
 commits format. Usually that means something like
