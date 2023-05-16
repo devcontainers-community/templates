@@ -1,7 +1,6 @@
 #!/bin/bash
+# Based on the devcontainers/template-starter code. Modified by @eitsupi.
 # https://github.com/devcontainers/template-starter/blob/a72eea935d8c7d41e4cbd3d021dc7a5c8771b19d/.github/workflows/smoke-test/test.sh
-# MIT License
-# Copyright (c) 2022 Microsoft Corporation
 
 TEMPLATE_ID="$1"
 
