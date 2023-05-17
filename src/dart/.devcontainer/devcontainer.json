@@ -17,6 +17,13 @@
 		}
 	},
 
+	// Add more features to get more addons in your devcontainer!
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"upgradePackages": "${templateOption:upgradePackages}"
+		}
+	},
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
