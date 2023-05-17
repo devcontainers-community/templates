@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Dart website](https://user-images.githubusercontent.com/61068799/237279796-3bfa3d85-c538-4320-aa68-27d7d26efa19.png)
+[![Dart website](https://thum.io/get/width/800/crop/600/noanimate/https://dart.dev/)](https://dart.dev/)
 
 </div>
 
