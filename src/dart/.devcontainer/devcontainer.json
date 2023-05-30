@@ -1,35 +1,19 @@
 {
-	"name": "Dart (Community)",
-	"build": {
-		"dockerfile": "Dockerfile",
-		// Update VARIANT to pick a Dart version
-		"args": { "VARIANT": "2" }
-	},
+  "image": "mcr.microsoft.com/devcontainers/universal",
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"dart-code.dart-code"
-			]
-		}
-	},
+  // 🧰 Add mixins and addons with devcontainer features! For a complete list
+  // of features, check out containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers-community/features/dart": {}
+  },
 
-	// Add more features to get more addons in your devcontainer!
-	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {
-			"upgradePackages": "${templateOption:upgradePackages}"
-		}
-	},
+  // 👷‍♂️ Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "echo 'Hello world!'",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
-
-	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+  // 🤩 You can add customizations for tools like VS Code here!
+  "customizations": {
+    "vscode": {
+      "extensions": ["dart-code.dart-code"]
+    }
+  }
 }
