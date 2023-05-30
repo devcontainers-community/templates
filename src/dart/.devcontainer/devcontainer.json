@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal",
+  "image": "mcr.microsoft.com/devcontainers/base",
 
   // 🧰 Add mixins and addons with devcontainer features! For a complete list
   // of features, check out containers.dev/features.
