@@ -9,11 +9,4 @@
 
   // 👷‍♂️ Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "echo 'Hello world!'",
-
-  // 🤩 You can add customizations for tools like VS Code here!
-  "customizations": {
-    "vscode": {
-      "extensions": ["dart-code.dart-code"]
-    }
-  }
 }
