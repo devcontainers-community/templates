@@ -10,8 +10,8 @@ module.exports = exports = (ctx) => {
     },
   };
   // https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
-  if (process.env.GITHUB_ACTIONS) {
-    options.pathPrefix = "/templates/";
+  if (process.env.BASE_URL) {
+    options.pathPrefix = process.env.BASE_URL;
   }
 
   // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
