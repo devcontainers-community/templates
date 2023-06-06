@@ -20,8 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with:
-          cache: npm
       - run: cd docs && npm ci
       - run: cd docs && npm pack
       - uses: actions/upload-artifact@v3
