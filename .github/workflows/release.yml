@@ -26,19 +26,3 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  publish-docs:
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy-pages.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: cd docs && npm ci
-      - uses: actions/configure-pages@v3
-      - run: cd docs && npm pack
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: docs/dist
-      - id: deploy-pages
-        uses: actions/deploy-pages@v2
