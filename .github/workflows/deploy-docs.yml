@@ -1,5 +1,11 @@
 name: Deploy docs
 on:
+  push:
+    branches: main
+    paths:
+      - docs/**
+      - src/**
+      - .github/workflows/deploy-docs.yml
   workflow_dispatch:
 concurrency:
   group: ${{ github.workflow }}
