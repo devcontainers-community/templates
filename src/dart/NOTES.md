@@ -11,8 +11,8 @@
 &mdash; [Dart programming language | Dart]
 
 This template will provide you with an environment ready to get started using
-Dart! You'll have access to the `dart` CLI. We also provide an option to install
-ZSH if you're into that. 😉
+Dart! You'll have access to the `dart` CLI. Check out [the Dart feature] that we
+use under the hood!
 
 ## History
 
@@ -22,4 +22,5 @@ project. It has since migrated here! ☄️
 <!-- prettier-ignore-start -->
 [microsoft/vscode-dev-containers]: https://github.com/microsoft/vscode-dev-containers#readme
 [Dart programming language | Dart]: https://dart.dev/
+[the dart feature]: https://devcontainers-community.github.io/features/dart.html
 <!-- prettier-ignore-end -->
