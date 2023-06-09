@@ -25,11 +25,11 @@ module.exports = exports = (ctx) => {
       const template = JSON.parse(
         await readFile(`../src/${name}/devcontainer-template.json`, "utf8")
       );
-      const readme = await readFile(`../src/${name}/README.md`, "utf8").catch(
+      const notes = await readFile(`../src/${name}/NOTES.md`, "utf8").catch(
         () => undefined
       );
-      template.readme = readme;
-      template.readmeHTML = marked(readme);
+      template.notes = notes;
+      template.notesHTML = marked(notes);
       templates.push(template);
     }
     return templates;
