@@ -1,25 +1,32 @@
 name: Deploy docs
+
 on:
   push:
-    branches: main
+    branches:
+      - main
     paths:
       - docs/**
       - src/**
-      - .github/workflows/deploy-docs.yml
+      - .github/workflows/preview-docs.yml
+  pull_request:
+    paths:
+      - docs/**
+      - src/**
+      - .github/workflows/preview-docs.yml
   workflow_dispatch:
+
+permissions:
+  contents: read
+
 concurrency:
-  group: ${{ github.workflow }}
+  group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
+
 jobs:
   deploy-docs:
     permissions:
-      contents: read
       id-token: write
       pages: write
-      deployments: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy-pages.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,10 +35,15 @@ jobs:
       - id: configure-pages
         uses: actions/configure-pages@v3
       - run: cd docs && npm pack
-        env:
-          BASE_URL: ${{ steps.configure-pages.base_url }}/
+      - uses: actions/upload-artifact@v3
+        if: ${{ github.ref != 'refs/heads/main'}}
+        with:
+          name: preview-docs
+          path: docs/dist
       - uses: actions/upload-pages-artifact@v1
+        if: ${{ github.ref == 'refs/heads/main'}}
         with:
           path: docs/dist
       - id: deploy-pages
+        if: ${{ github.ref == 'refs/heads/main'}}
         uses: actions/deploy-pages@v2
