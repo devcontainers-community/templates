@@ -1,0 +1,18 @@
+nav > ul {
+  display: flex;
+  gap: 0.3em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 0.6em;
+  color: var(--text-bright);
+  background-color: var(--selection);
+}
+nav > ul > li > a:hover {
+  filter: brightness(1.2);
+}

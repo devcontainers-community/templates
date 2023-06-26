@@ -1,9 +1,9 @@
 {
 	"id": "jupyter-datascience-notebooks",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"name": "Jupyter Data Science Notebooks",
 	"description": "Use Jupyter Data Science Notebooks with Python, R, Julia, and more.",
-	"documentationURL": "https://github.com/devcontainers-community/templates/tree/main/src/jupyter-datascience-notebooks",
+	"documentationURL": "https://devcontainers-community.github.io/templates/jupyter-datascience-notebooks/",
 	"publisher": "Community",
 	"licenseURL": "https://github.com/devcontainers-community/templates/blob/main/LICENSE",
 	"options": {
