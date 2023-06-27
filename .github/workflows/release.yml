@@ -26,3 +26,6 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update document
+        uses: ./github/workflows/deploy-docs.yml
