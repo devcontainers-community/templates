@@ -1,18 +1,12 @@
 name: Deploy docs
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - docs/**
-      - src/**
-      - .github/workflows/preview-docs.yml
   pull_request:
     paths:
       - docs/**
       - src/**
       - .github/workflows/preview-docs.yml
+  workflow_call:
   workflow_dispatch:
 
 permissions:
