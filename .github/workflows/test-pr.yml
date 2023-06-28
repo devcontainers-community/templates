@@ -21,6 +21,7 @@ jobs:
         with:
           filters: |
             jupyter-datascience-notebooks: ./**/jupyter-datascience-notebooks/**
+            dart: ./**/dart/**
 
   test:
     needs: [detect-changes]

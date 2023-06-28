@@ -1,0 +1,12 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+
+  // 🧰 Add mixins and addons with devcontainer features! For a complete list
+  // of features, check out containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers-community/features/dart": {}
+  },
+
+  // 👷‍♂️ Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "echo 'Hello world!'",
+}

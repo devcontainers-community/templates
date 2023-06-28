@@ -1,0 +1,10 @@
+{
+  "id": "dart",
+  "version": "1.0.0",
+  "name": "Dart",
+  "description": "Develop Dart based applications. Includes the Dart SDK, needed extensions, and dependencies.",
+  "documentationURL": "https://github.com/devcontainers-community/templates/tree/main/src/dart",
+  "licenseURL": "https://github.com/devcontainers-community/templates/blob/main/LICENSE",
+  "options": {},
+  "platforms": ["Dart"]
+}
