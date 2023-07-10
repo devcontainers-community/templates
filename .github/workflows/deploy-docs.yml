@@ -34,7 +34,7 @@ jobs:
         with:
           name: preview-docs
           path: docs/dist
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v2
         if: ${{ github.ref == 'refs/heads/main'}}
         with:
           path: docs/dist
