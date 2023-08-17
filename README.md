@@ -1,26 +1,30 @@
-# Community devcontainer templates
+# Community Dev Container templates
 
 📋 Community-driven collection of templates for [@devcontainers]
 
-<div align="center">
-
-![](https://i.imgur.com/Us84cLP.png)
-
-</div>
+<p align="center">
+  <img width=500 src="https://i.imgur.com/Us84cLP.png">
+</p>
 
 🔧 80% of the configuration you'll ever need \
 💻 Ready to go with GitHub Codespaces \
-🚀 Quickly get up-and-running with a devcontainer
+🚀 Quickly get up-and-running with a Dev Container
 
-**🤝 We want you!** If you're a community devcontainer template maintainer, we'd
-love to add you to this project! ❤️ If you just want to hand off a devcontainer
-template that you no longer want to maintain, **that's perfect too**. Open a
-[Discussion] and let's have a friendly chat. 😊
+[![](https://img.shields.io/static/v1?style=for-the-badge&message=%F0%9F%93%8B+Add+a+template&color=0ABF53&label=)](https://github.com/devcontainers-community/templates/discussions/new?category=ideas) &nbsp;
+[![](https://img.shields.io/static/v1?style=for-the-badge&message=%F0%9F%A4%9D+Join+the+org&color=222222&label=)](https://github.com/orgs/devcontainers-community/discussions/new?category=general)
+
+<!-- prettier-ignore-start -->
+<!-- START_TEMPLATE_LIST -->
+
+<!-- END_TEMPLATE_LIST -->
+<!-- prettier-ignore-end -->
 
 ## Usage
 
 ![Codespaces](https://img.shields.io/static/v1?style=for-the-badge&message=Codespaces&color=181717&logo=GitHub&logoColor=FFFFFF&label=)
 ![Devcontainers](https://img.shields.io/static/v1?style=for-the-badge&message=Devcontainers&color=2496ED&logo=Docker&logoColor=FFFFFF&label=)
+
+<img align=right height=220 src="https://i.imgur.com/Op9cG3y.png">
 
 After creating a GitHub Codespace (or a devcontainer in VS Code), open the
 Command Palette to find the <kbd>Dev Containers: Add Dev Container Configuration
@@ -32,33 +36,27 @@ unofficial templates!
 
 ## Development
 
-![Devcontainers](https://img.shields.io/static/v1?style=for-the-badge&message=Devcontainers&color=2496ED&logo=Docker&logoColor=FFFFFF&label=)
-![Bash](https://img.shields.io/static/v1?style=for-the-badge&message=Bash&color=4EAA25&logo=GNU+Bash&logoColor=FFFFFF&label=)
+![Deno](https://img.shields.io/static/v1?style=for-the-badge&message=Deno&color=000000&logo=Deno&logoColor=FFFFFF&label=)
 
-🐣 The [@devcontainers-community] organization is still in its early stages.
-This template repository is currently limited in scope. We are **only adding
-popular templates from [microsoft/vscode-dev-containers]** for now. You can find
-more information about our goals and plans in [devcontainers-community#1]. If
-you notice a bug 🐛 or have an improvement suggestion 💡 we'd love to hear it!
-😍
+This is just the **collection index** of all the templates that we have. The
+actual source code for each feature is housed in each feature's own repository.
+🏠 Why do this? I dunno. 🤷‍♂️
 
-If you're interested in getting started modifying, adding, or testing a template
-in this repository, you can do so without even leaving your browser thanks to
-GitHub Codespaces! ☁️ After optionally forking the repository, you just hit the
-green <kbd>Code</kbd> button at the top of the GitHub web UI and then
-<kbd>Create codespace on main</kbd>. 🚀
+ℹ This magic index image is only really used by [containers.dev/templates] and
+other indexing tools. You can use Dev Container Features without an index just
+fine.
 
-After launching your dev environment and making some changes, you're probably
-going to want to test those changes. To do so, you can run the `./test.sh`
-script.
+To add a new feature, you can [open an Issue]. It'll probably result in some
+kind of new repository being created (or [transferred] to us if you've already
+coded it up) and you being granted unrestricted access to manage it how you see
+fit. 🤗
 
-🤝 Check out our [contributing guide] to see how to get your changes merged!
+If you want to become a Member of this organization, just [open an Issue] and
+we'll get you set up. 🎉 We're very open to new people.
 
 <!-- prettier-ignore-start -->
 [@devcontainers]: https://github.com/devcontainers
-[@devcontainers-community]: https://github.com/devcontainers-community
-[microsoft/vscode-dev-containers]: https://github.com/microsoft/vscode-dev-containers#readme
-[devcontainers-community#1]: https://github.com/orgs/devcontainers-community/discussions/1
-[discussion]: https://github.com/devcontainers-community/templates/discussions
-[contributing guide]: https://github.com/devcontainers-community/templates/blob/main/CONTRIBUTING.md
+[containers.dev/templates]: https://containers.dev/templates
+[open an issue]: https://github.com/devcontainers-community/templates/issues/new
+[transferred]: https://docs.github.com/en/github/administering-a-repository/transferring-a-repository
 <!-- prettier-ignore-end -->
