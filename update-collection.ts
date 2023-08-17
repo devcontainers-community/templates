@@ -24,6 +24,7 @@ async function getTemplateManifest(image: string): Promise<any> {
   if (!image.endsWith(":latest")) {
     image += ":latest";
   }
+  const basename = image.split("/").pop().split(":")[0]
 
   const tempDirPath = temporaryDirectory()
   const oldCWD = $.cwd
@@ -31,6 +32,7 @@ async function getTemplateManifest(image: string): Promise<any> {
   let templateManifest: any
   try {
     await $`oras pull ${image}`
+    await $`tar -xvf devcontainer-template-${basename}.tgz`
     templateManifest = JSON.parse(await readFile(join($.cwd, "devcontainer-template.json")))
   } finally {
     $.cwd = oldCWD
