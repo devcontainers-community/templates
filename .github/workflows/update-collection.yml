@@ -26,5 +26,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: devcontainers-community/update-collection@v1
   update-readme:
+    needs: update-collection
     uses: ./.github/workflows/update-readme.yml
     secrets: inherit
