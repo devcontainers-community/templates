@@ -1,0 +1,24 @@
+name: Update readme
+on:
+  push:
+    branches: "main"
+    paths:
+      - .github/workflows/update-main-readme.yml
+  pull_request:
+    paths:
+      - .github/workflows/update-main-readme.yml
+  registry_package: {}
+  workflow_dispatch: {}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  update-readme:
+    concurrency: ${{ github.ref }}-write
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: devcontainers-community/update-collection-readme@v1
+      - uses: stefanzweifel/git-auto-commit-action@v4
