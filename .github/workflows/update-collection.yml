@@ -27,5 +27,7 @@ jobs:
       - uses: devcontainers-community/update-collection@v1
   update-readme:
     needs: update-collection
+    permissions:
+      contents: write
     uses: ./.github/workflows/update-readme.yml
     secrets: inherit
