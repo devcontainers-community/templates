@@ -25,10 +25,17 @@ async function getTemplateManifest(image: string): Promise<any> {
     image += ":latest";
   }
 
-  const imageManifest = JSON.parse(
-    (await $`oras manifest fetch ${image}`).toString()
-  );
-  return JSON.parse(imageManifest.annotations["dev.containers.metadata"]);
+  const tempDirPath = temporaryDirectory()
+  const oldCWD = $.cwd
+  $.cwd = tempDirPath
+  let templateManifest: any
+  try {
+    await $`oras pull ${image}`
+    templateManifest = JSON.parse(await readFile(join($.cwd, "devcontainer-template.json")))
+  } finally {
+    $.cwd = oldCWD
+  }
+  return templateManifest
 }
 
 const devcontainerCollection = {
