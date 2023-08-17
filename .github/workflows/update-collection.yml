@@ -8,7 +8,6 @@ on:
     # https://crontab.guru/daily
     - cron: "0 0 * * *"
   workflow_dispatch:
-  workflow_call:
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
@@ -26,3 +25,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: devcontainers-community/update-collection@v1
+  update-readme:
+    uses: ./.github/workflows/update-readme.yml
+    secrets: inherit
