@@ -16,7 +16,8 @@
 <!-- prettier-ignore-start -->
 <!-- START_TEMPLATE_LIST -->
 
-
+- **[Dart](https://github.com/devcontainers-community/templates/tree/main/src/dart)** - Develop Dart based applications. Includes the Dart SDK, needed extensions, and dependencies.
+- **[Jupyter Data Science Notebooks](https://github.com/devcontainers-community/templates-jupyter-datascience-notebooks)** - Use Jupyter Data Science Notebooks with Python, R, Julia, and more.
 
 <!-- END_TEMPLATE_LIST -->
 <!-- prettier-ignore-end -->
